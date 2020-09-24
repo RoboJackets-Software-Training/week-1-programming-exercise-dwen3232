@@ -65,7 +65,7 @@ int main() {
     y.push_back(sum);
   }
 
-  std::cout << "y: {" << y[0];
+  std::cout << "{" << y[0];
   for(int i = 1; i < y.size(); i++) {
     std::cout << ", " << y[i];
   }
