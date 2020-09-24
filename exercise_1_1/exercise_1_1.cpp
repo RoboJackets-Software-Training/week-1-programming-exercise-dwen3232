@@ -51,7 +51,7 @@ int main() {
         }
         //
         for (unsigned i = 0; i < size; i++) {
-                std::cout << "Wheel at index " << i << " has speed: " << wheel_speeds[i] << std::endl;
+                std::cout << "wheel at index " << i << " has speed: " << wheel_speeds[i] << std::endl;
         }
     }
 
