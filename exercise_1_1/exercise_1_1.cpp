@@ -43,7 +43,7 @@ int main() {
         }
         else if (direction == 'e') {
             for (unsigned i = 0; i < size; i++) wheel_speeds[i]=0;
-            std::cout << "Shutting Down" << std::endl;
+            std::cout << "Shutting down" << std::endl;
             keep_going = false;
         }
         else {
