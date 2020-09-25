@@ -37,10 +37,39 @@ int main() {
 
   // TODO write your code here
   // =========== START =========
+  std::cout << "x: {" << x[0];
+  for(int i = 1; i < x.size(); i++) {
+    std::cout << ", " << x[i];
+  }
+  std::cout << "}" << std::endl;
 
+  std::cout << "w: {" << w[0];
+  for(int i = 1; i < w.size(); i++) {
+    std::cout << ", " << w[i];
+  }
+  std::cout << "}" << std::endl;
 
+  int edge = (w.size() - 1)/2;
+  for (int i = 0; i < x.size(); i++) {
+    double sum = 0;
+    for (int j =0; j < w.size(); j++) {
+      int rel_pos = i+j-edge;
+      if (rel_pos >= 0 && rel_pos < x.size()) {
+        sum += x[rel_pos] * w[j];
+      } else if (!pack_with_zeros && rel_pos < 0) {
+        sum += x[0] * w[j];
+      } else if (!pack_with_zeros && rel_pos >= x.size()) {
+        sum += x[x.size()-1] * w[j];
+      }
+    }
+    y.push_back(sum);
+  }
 
-
+  std::cout << "{" << y[0];
+  for(int i = 1; i < y.size(); i++) {
+    std::cout << ", " << y[i];
+  }
+  std::cout << "}" << std::endl;
   // =========== END ===========
 
   return 0;
